@@ -46,6 +46,11 @@ header a {
 main a {
   color: var(--danger-color);
 }
+
+main a:hover {
+    background-color: black;
+    transition-duration: 2s;
+}
 /* end article link transitions */
 
 main > article, nav{
@@ -100,6 +105,37 @@ section.hero > button {
   border-radius: 12px;
   text-transform: uppercase;
   cursor: pointer;
+  transition: transform 2s ease-in-out; 
+}
+
+section.hero > button:hover {
+    animation: rainbow 2s ease-in-out 3;
+}
+
+@keyframes rainbow {
+    100% {
+        transform: scale(1.25);
+        color: rgb(165, 0, 165);
+    }
+
+    80% {
+        color: blue;
+    }
+
+    64% { 
+        color: green;
+    }
+
+    48% {
+        color: yellow;
+    }
+
+    32% {
+        color: orange
+    }
+    16% {
+        color: red;
+    }
 }
 
 main article {
@@ -126,4 +162,14 @@ footer {
   text-transform: uppercase;
   padding: 24px 0;
   color: var(--off-white);
+}
+
+nav > a:hover {
+    color: rgb(0, 255, 234); 
+    transform: scale(1.25);
+    transition-duration: 3s;
+}
+
+a.hover {
+    
 }
